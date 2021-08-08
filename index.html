@@ -1,127 +1,469 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Projet - POO2 - 2021</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet"> 
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
 
-<html>
-	<head>
-		<title>Projet POO2</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-			<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/logo1.png">
+</head><!--/head-->
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<body>
 
-				<!-- Wrapper -->
-					<div id="wrapper">
+  <!--.preloader-->
+  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+  <!--/.preloader-->
 
-						<!-- Panel (Banner) -->
-							<section class="panel banner right">
-								<div class="content color4 span-3-75">
-									<h1 class="major">Bienvennue, A Vous !
-									</h1>
-									<p>Ceci est un projet de modélisation de maquette de Pont et d'une maison réalisé via le bibiliothéque
-										 <strong>Python TURTLE</strong> en utilisant le principe de la décomposition fonctionnelle, qui consiste à diviser un probleme principal en 
-										 sous problémes afin de faciliter la concéption.
+  <header id="home">
+    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image: url(images/slider/python.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">Bienvenue à <span>Vous ! </span></h1>
+            <p class="animated fadeInRightBig">Ceci est un projet de modélisation de maquette de 
+              Pont et d'une maison réalisé via le bibiliothéque
+              <strong>Python TURTLE</strong> <br> en utilisant le principe de la décomposition fonctionnelle, <br> qui consiste à diviser un probleme principal en 
+              sous problémes afin de faciliter la concéption.</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#portfolio">Découvrir</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/house.png)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">Une maquette de <span>Maison</span></h1>
+            <p class="animated fadeInRightBig">Conception - Décomposition - Développement</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#portfolio">Découvrir</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/bridge.png)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">Une maquette de <span>Pont</span></h1>
+            <p class="animated fadeInRightBig">Conception - Décomposition - Développement</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#portfolio">Découvrir</a>
+          </div>
+        </div>
+      </div>
+      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
 
-										<br><strong>Scrollez à droite svp ! </strong>
-									</p>
-									<ul class="actions">
-										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="20% 20%">
-									<img src="images/download.jpg" width="20" alt="" />
-								</div>
-							</section>
+      <a id="tohash" href="#portfolio"><i class="fa fa-angle-down"></i></a>
 
-						<!-- Panel (Spotlight) -->
-							<section class="panel  medium right" id="first" style="background-image: url(images/maison.png); background-size:contain; background-position: center; background-repeat: no-repeat;">
-								<div class="row content span-7 align-center col-md-4 col-sm-6 col-xs-12">
-									<h2 class="major" style="color: rgb(21, 90, 0);">Maquette Maison</h2>
-									
-								</div>
-								
-							</section>
+    </div><!--/#home-slider-->
+    <div class="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <h1><img class="img-responsive mb-5" src="images/logo1.png" width="100px" height="5px" alt="logo"></h1>
+          </a>                    
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll active"><a href="#home">Accueil</a></li>
+            <li class="scroll"><a href="#portfolio">Portfolio</a></li>
+            <li class="scroll"><a href="#services">Liens</a></li> 
+            <li class="scroll"><a href="#team">Equipe</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+  </header><!--/#home-->
 
-						<!-- Panel (Spotlight) Copie-->
-						<section class="panel  medium right" id="first" style="background-image: url(images/pont.png); background-size:contain; background-position: center; background-repeat: no-repeat;">
-							<div class="content span-7 align-center col-md-4 col-xs-12">
-								<h2 class="major" style="color: rgb(14, 30, 122);">Maquette Pont</h2>
-								
-							</div>
-					
-						</section>
+  <section id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h2>Portfolio</h2>
+          <p>Nous avons implémenter une maquette de Maison et celle d'un Pont grace à TURTLE </p>
+        </div>
+      </div> 
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/house.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Realisée avec TURTLE</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="portfolio-single.html"  target="_blank"><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/house.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/devanture.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Devanture</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/devanture.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/fenetres_devanture.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Fenétres Devanture</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/fenetres_devanture.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/portail_devanture.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Portail Devanture</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/portail_devanture.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="700ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/etage.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Etage</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/etage.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="800ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/portes_etage.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Portes Etage</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/portes_etage.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="900ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/toit_etage.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Maison</h3>
+                    <p>Toit Etage</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/toit_etage.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="900ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/pont1.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Pont</h3>
+                    <p>Première Portion du Pont</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/pont1.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/pont2.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Pont</h3>
+                    <p>Deuxiéme Portion du Pont</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="portfolio-single.html"  target="_blank"><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/pont2.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/pont3.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Pont</h3>
+                    <p>Troisiéme Portion du Pont</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="portfolio-single.html"  target="_blank"><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/pont3.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="900ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="images/slider/pont4.png" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Maquette Pont</h3>
+                    <p>Pieds du Pont</p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="images/slider/pont4.png" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <!-- <div id="portfolio-single-wrap">
+      <div id="portfolio-single">
+      </div>
+    </div>/#portfolio-single-wrap -->
+  </section><!--/#portfolio-->
+  
+  <section id="services">
+    <div class="container">
+      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="row">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+            <h2>Nos Services</h2>
+            <p>Nos différents services peuvent etre décrits comme suit</p>
+          </div>
+        </div> 
+      </div>
+      <div class="text-center our-services">
+        <div class="row">
+           
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
+            <div class="service-icon">
+              <i class="fa fa-umbrella"></i>
+            </div>
+            <div class="service-info">
+              <h3>Creativité</h3>
+              <p>La créativité occupe un place importante dans le milieu de la programation et ça nous l'avons compris ! </p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
+            <a href="images/Decomposition Fonctionnelle Projet1 POO2.pdf">
+              <div class="service-icon">
+                <i class="fa fa-book"></i>
+              </div>
+            </a>
+            <div class="service-info">
+              <h3>Support Téchnique</h3>
+              <p>Une documentation compléte des maquettes illustrant
+                les différentes étapes de la décomposition fonctionnelle
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
+            <a href="https://github.com/niangalla/Projet-1-POO2-GL-2021">
+              <div class="service-icon">
+              <i class="fa fa-github"></i>
+              </div>
+            </a>
+            
+            <div class="service-info">
+              <h3>Dépot Github</h3>
+              <p>Vous trouverez tous les scripts Python dans notre dépot github</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section><!--/#services-->
+  
+  
 
+  <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2>Equipe de Développement</h2>
+        </div>
+      </div>
+      <div class="team-members">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+                <img class="img-responsive" src="images/team/alla.jpg" alt="">
+              </div>
+              <div class="member-info">
+                <h3>Alla NIANG</h3>
+                <h4>Développeur &amp; Founder</h4>
+                <p>Etudiant en Génie Logiciel</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <div class="member-image">
+                <img class="img-responsive" src="images/team/bocoum1.jpg" alt="">
+              </div>
+              <div class="member-info">
+                <h3>Abdoul Dibavata BOCOUM</h3>
+                <h4>Développeur &amp; Founder</h4>
+                <p>Etudiant en Génie Logiciel</p>
+              </div>
+      
+            </div>
+          </div>
+        
+        </div>
+      </div>            
+    </div>
+  </section><!--/#team-->    
+  <footer id="footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>&copy; LGI - GL - 2021</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="pull-right">UIDT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-						<!-- Panel -->
-							<section class="panel color4-alt">
-								<div class="intro joined">
-									<h2 class="major">Comment ça marche ?</h2>
-									<p>Le code source ainsi qu'une <a href="images/Décomposition Fonctionnelle Projet1 POO2.pdf" target="_blank">documentation compléte du projet</a> sont disponibles sur notre dépot Github
-									que vous pouvez trouver en suivant ce lien : <a href="https://github.com/niangalla/Projet-1-POO2-GL-2021" target="_blank">Projet-1-POO2-GL-2021</a>
-								<br>Clonez et exécuter les scripts en local pour voir le rendu ! </p>
-								</div>
-								<div class="inner">
-									
-								</div>
-							</section>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/mousescroll.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
-						<!-- Panel (Spotlight) -->
-							<section class="panel  color4-alt left">
-								<div class="content span-5">
-									<h2 class="major">Equipe de développement: </h2>
-									
-									<div class="row d-flex justify-content-center" >
-										<div class="col-md-4">
-											<p class="text-center">
-												<strong>Alla NIANG </strong> 
-											</p>
-											<img src="images/alla1.jpg" width="250px" height="300px" class="rounded-circle" alt="">
-											<p>
-												<strong>Etudiant en Licence 3 Informatique Option Génie Logiciel</strong> 
-											</p>
-										</div>
-										<div class="col-md-4">
-											<p class="text-center">
-												<strong>Abdoul Dibavata BOCOUM </strong> 
-											</p>
-						
-											<img src="images/bocoum.jpg" width="250px" height="300px" class="rounded-circle" alt="">
-											<p>
-												<strong>Etudiant en Licence 3 Informatique Option Génie Logiciel</strong> 
-											</p>
-										</div>
-										
-									</div>
-									<div class="row d-flex justify-content-center">
-										<div class="col-md-4">
-											<h2 class="text-center">Merci ! </h2>
-										</div>
-										
-									</div>
-							
-								</div>
-							
-							</section>
-
-	
-
-						<!-- Copyright -->
-							<div class="copyright">&copy; LGI3 - GL - 2021</div>
-
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>

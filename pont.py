@@ -11,9 +11,9 @@ def premiere_portion_pont():
     subdivision(x=-277, y=0, distance=84)
     subdivision(x=-319, y=0, distance=64)
     oblique(x=-25, y=0, radius=45, orientation='rt', distance=44)
-    triangle(x=-151, y=0, base=84, angle1=117, cote=95, angle2=127, fill=False)
-    triangle(x=-235, y=0, base=84, angle1=112, cote=114, angle2=137, fill=False)
-    triangle(x=-319, y=0, base=84, angle1=117, cote=95, angle2=127, fill=False)
+    triangle(x=-151, y=0, base=84, angle1=116.5, cote=95, angle2=127, cote2=95, fill=False)
+    triangle(x=-235, y=0, base=84, angle1=112, cote=114, angle2=137, cote2=114, fill=False)
+    triangle(x=-319, y=0, base=84, angle1=117, cote=95, angle2=127, cote2=95, fill=False)
     oblique(x=-361, y=0, radius=-45, orientation='lt',  distance=-44)
 
 # Fonction pour dessiner la Portion2 du pont
@@ -27,9 +27,9 @@ def deuxieme_portion_pont():
     subdivision(x=57, y=0, distance=84)
     subdivision(x=15, y=0, distance=64)
     oblique(x=309, y=0, radius=45, orientation='rt', distance=44)
-    triangle(x=183, y=0, base=84, angle1=117, cote=95, angle2=127, fill=False)
-    triangle(x=99, y=0, base=84, angle1=112, cote=114, angle2=137, fill=False)
-    triangle(x=15, y=0, base=84, angle1=117, cote=95, angle2=127, fill=False)
+    triangle(x=183, y=0, base=84, angle1=116.5, cote=95, angle2=127, cote2=95, fill=False)
+    triangle(x=99, y=0, base=84, angle1=112, cote=114, angle2=137, cote2=114, fill=False)
+    triangle(x=15, y=0, base=84, angle1=117, cote=95, angle2=127, cote2=95, fill=False)
     oblique(x=-25.2, y=0, radius=-45, orientation='lt',  distance=-42.4)
 
 # Fonction pour dessiner la Portion3 du pont
@@ -43,9 +43,9 @@ def troisieme_portion_pont():
     subdivision(x=391, y=0, distance=84)
     subdivision(x=349, y=0, distance=64)
     oblique(x=643, y=0, radius=45, orientation='rt', distance=44)
-    triangle(x=517, y=0, base=84, angle1=117, cote=95, angle2=127, fill=False)
-    triangle(x=433, y=0, base=84, angle1=112, cote=114, angle2=137, fill=False)
-    triangle(x=349, y=0, base=84, angle1=117, cote=95, angle2=127, fill=False)
+    triangle(x=517, y=0, base=84, angle1=116.5, cote=95, angle2=127, cote2=95, fill=False)
+    triangle(x=433, y=0, base=84, angle1=112, cote=114, angle2=137, cote2=114, fill=False)
+    triangle(x=349, y=0, base=84, angle1=117, cote=95, angle2=127, cote2=95, fill=False)
     oblique(x=307, y=0, radius=-45, orientation='lt',  distance=-42.4)
 
 # Fonction pour dessiner les Pieds du pont
@@ -62,13 +62,17 @@ def pieds_pont():
 def programme_principal():
     setup(width=2000, height=2500, startx=0, starty=0)
     title("MY WONDERFUL BRIDGE !")
+    speed(8)
     shape("turtle")
     pencolor("#4976c6")
-    pensize(3.7)
+    pensize(3.5)
     premiere_portion_pont()
     deuxieme_portion_pont()
     troisieme_portion_pont()
     pieds_pont()
+    shape('classic')
+    pencolor("#000000")
+    legende_maquette(x=50, y=-100, legende="Figure 1 : Maquette d'un Pont")
 
     exitonclick()
 

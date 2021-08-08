@@ -1,8 +1,10 @@
 from turtle import *
-""" Module spécialise en dessin industriel avec TURTLE """
+""" Module spécialise en dessin de formes et figures géométriques pour créer des structures
+    en Génie Civil comme des Ponts, des Maisons ect. avec la bibliothéque Python TURTLE 
+"""
 
 # Fonction pour dessiner un cercle
-""" Entrées : radius , coordonnées x et y
+""" Entrées : radius , coordonnées x et y, fill(boolean pour colorier)
     Sorties :-
     Méthode : usage de la fonction circle de Turtle
     Connu :-
@@ -20,7 +22,7 @@ def cercle(x, y, radius, fill):
         circle(radius)
 
 # Fonction pour dessiner un demi-cercle
-""" Entrées : radius, coordonnées x et y
+""" Entrées : radius, coordonnées x et y, fill(boolean pour colorier)
     Sorties :-
     Méthode : usage de la fonction circle de Turtle et d'un angle de 180
     Connu :-
@@ -55,12 +57,12 @@ def carre(x, y, cote):
         left(90)
 
 # Fonction pour dessiner un triangle
-""" Entrées : base, angle1, cote, angle2, coordonnées x et y
+""" Entrées : base, angle1, cote, angle2, cote2, fill(boolean pour colorier), coordonnées x et y
     Sorties :-
     Méthode : usage des fonctions forward et left de Turtle
     Connu :-
  """
-def triangle(x,y, base, angle1, cote, angle2, fill):
+def triangle(x,y, base, angle1, cote, angle2, cote2, fill):
     penup()
     goto(x,y)
     pendown()
@@ -71,19 +73,19 @@ def triangle(x,y, base, angle1, cote, angle2, fill):
         lt(angle1)
         fd(cote)
         lt(angle2)
-        fd(cote)
+        fd(cote2)
         end_fill()
     else:
         fd(base)
         lt(angle1)
         fd(cote)
         lt(angle2)
-        fd(cote)
+        fd(cote2)
     up()
 
 
 # Fonction pour dessiner un rectangle
-""" Entrées : longueur,largeur coordonnées x et y
+""" Entrées : longueur,largeur coordonnées x et y, fill(boolean pour colorier)
     Sorties :-
     Méthode : usage des fonctions forward et left de Turtle
     Connu :-
@@ -124,7 +126,7 @@ def polygone(x, y, nombre_cote, longueur_cote):
         lt(360/nombre_cote)
 
 # Fonction pour dessiner une trapeze
-""" Entrées : petite_base, cotea, grande_base, coteb, coordonnées x et y
+""" Entrées : petite_base, cote, grande_base, fill(boolean pour colorier), coordonnées x et y
     Sorties :-
     Méthode : usage des fonctions forward et left de Turtle
     Connu :-
@@ -145,8 +147,6 @@ def trapeze(x,y, petite_base, cote, grande_base, fill):
             lt(155)
             fd(cote)
         seth(0)
-        # end_poly
-        # get_poly()
         end_fill()
     else:
         for i in range(1): 
@@ -158,8 +158,6 @@ def trapeze(x,y, petite_base, cote, grande_base, fill):
             lt(155)
             fd(cote)
         seth(0)
-        # end_poly
-        # get_poly()
 
 # Fonction pour dessiner un losange
 """ Entrées : long, coordonnées x et y
@@ -243,3 +241,15 @@ def oblique(x,y, radius, orientation, distance):
     fd(distance)
     up()
 
+# Fonction pour ecrire la légende de la maquette maison et celle du pont
+""" Entrées : legende, coordonnées x et y
+    Sorties :-
+    Méthode : usage de la fonction write de Turtle pour ecrire du texte
+    Connu :-
+ """
+def legende_maquette(x, y, legende):
+    pensize(2)
+    up()
+    goto(x,y)
+    down()
+    write(legende, True)

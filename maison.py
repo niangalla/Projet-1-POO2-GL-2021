@@ -12,8 +12,8 @@ def etage():
 def toit_etage():
     color("#000000", "#A9D18E")
     trapeze(x=-172, y=299, petite_base=340, cote=135, grande_base=580, fill=True)
-    triangle(x=170, y=300, base=230, angle1=152.9, cote=124.5, angle2=53.2, fill=True)
-    triangle(x=-400, y=300, base=230, angle1=155, cote=132, angle2=50.8, fill=True)
+    triangle(x=170, y=300, base=230, angle1=153.4, cote=124.5, angle2=52, cote2=124.5, fill=True)
+    triangle(x=-400, y=300, base=230, angle1=154.8, cote=131.9, angle2=51.8, cote2=125.5, fill=True)
 
 # Fonction pour dessiner les portes de l'etage
 def portes_etage():
@@ -35,6 +35,7 @@ def devanture_maison():
     trapeze(x=-600, y=200, petite_base=1200, cote=80, grande_base=1343, fill=True)
     color("#000000", "#FFFFFF")
     rectangle(x=-111, y=189, longueur=213, largeur=45, fill=True)
+    legende_maquette(x=-35, y=209, legende="WELCOME")
 
 # Fonction pour dessiner les fenetres de la maison
 def fenetres_devanture():
@@ -74,7 +75,6 @@ def portail_devanture():
     color("#000000", "#FFFFFF")
     rectangle(x=-72, y=-198, longueur=135, largeur=387, fill=True)
     color("#000000", "#D9D9D9")
-    # color("#000000", "#FFFFFF")
     rectangle(x=-61, y=-198, longueur=113, largeur=387, fill=True)
     color("#000000", "#FFFFFF")
     rectangle(x=-42, y=-198, longueur=75, largeur=175, fill=True)
@@ -83,7 +83,6 @@ def portail_devanture():
     rectangle(x=-42, y=-209, longueur=75, largeur=11, fill=True)
     rectangle(x=-48, y=-220, longueur=87, largeur=11, fill=True)
     rectangle(x=-52, y=-233, longueur=95, largeur=13, fill=True)
-    
     rectangle(x=-56, y=-246, longueur=103, largeur=13, fill=True)
     rectangle(x=-60, y=-259, longueur=111, largeur=13, fill=True)
     rectangle(x=-64, y=-272, longueur=119, largeur=13, fill=True)
@@ -93,7 +92,6 @@ def portail_devanture():
     color("#000000", "#FFFFFF")
     rectangle(x=-40, y=78, longueur=64, largeur=53, fill=True)
     rectangle(x=-40, y=78, longueur=32, largeur=53, fill=False)
-
     rectangle(x=-83, y=-198, longueur=11, largeur=387, fill=True)
     rectangle(x=62.5, y=-198, longueur=11, largeur=387, fill=True)
     
@@ -109,6 +107,7 @@ def programme_principal():
     etage()
     portes_etage()
     toit_etage()
+    legende_maquette(x=-85, y=-340, legende="Figure 2 : Façade d'un Batiment")
 
     exitonclick()
 

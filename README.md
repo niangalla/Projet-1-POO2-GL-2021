@@ -1,6 +1,10 @@
 ## ABOUT
 Un projet de modélisation de maquette d'ouvrages en Génie Civil2D avec la bibliothéque Python Turtle.
 
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=niangalla&show_icons=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+
+
 LIKE MY WORK ?
 
 
